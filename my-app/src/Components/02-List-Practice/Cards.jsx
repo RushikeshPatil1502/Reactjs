@@ -19,9 +19,24 @@ const list = [
     }
 ]
 
+const flag = true;
+
+function rendertext(getFlag){
+   return getFlag ? <h1>Render if true</h1> : <h1>Render if false</h1>
+}
+
+const renderBlock = flag ? <h1>VarRender</h1> : <h1>notVarRender</h1>
+
 function Cards() {
   return (
     <>
+    <div>Conditionals:</div>
+    {
+       rendertext(flag)
+    }
+    <div>
+        {renderBlock}
+    </div>
     <div className=' px-5 py-5 rounded-xl mt-6 bg-white flex flex-row gap-4'>
         {
             list.map(
