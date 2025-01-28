@@ -5,13 +5,20 @@ class ClassBasedComponent extends Component{
 
     state = {
         showtext: true,
-        changeColor: false
+        changeColor: false, 
+        count: 0
     }
 
     handleClick = () => {
         this.setState({
             showtext : !this.state.showtext,
             changeColor: !this.state.changeColor
+        })
+    }
+
+    handleCount = () => {
+        this.setState({
+            count: this.state.count + 1
         })
     }
 
@@ -24,6 +31,11 @@ class ClassBasedComponent extends Component{
         }
         <div onClick={this.handleClick}>
            <Button buttonDescription='Toggle Text'/>
+        </div>
+        <div>{this.state.count}</div>
+
+        <div onClick={this.handleCount}>
+        <Button buttonDescription='+' />
         </div>
     </div>
    }
