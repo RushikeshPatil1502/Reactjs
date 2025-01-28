@@ -1,6 +1,7 @@
 // import ClassBasedComponent from "./Components/ClassBasedComponent"
 // import FunctionalComponent from "./Components/FunctionalComponent"
 
+import Cards from "./Components/02-List-Practice/Cards"
 import ChelsPlayers from "./Components/02-List-Practice/ChelsPlayers"
 import ProductList from "./Components/02-Nested-Components/ProductList"
 const chelseaPlayersList = ['Cole Palmer' , 'Enzo Fernandez' , 'Reece James']
@@ -16,6 +17,7 @@ const App = () => {
           <ProductList name='Rushikesh' city='Virar' listofChelseaPlayers={chelseaPlayersList} />
 
           <ChelsPlayers />
+          <Cards />
       </div>
       
   )
