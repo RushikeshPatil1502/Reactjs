@@ -35,7 +35,7 @@ class ClassBasedComponent extends Component{
         <div>{this.state.count}</div>
 
         <div onClick={this.handleCount}>
-        <Button buttonDescription='+' />
+        <Button buttonDescription='+'/>
         </div>
     </div>
    }

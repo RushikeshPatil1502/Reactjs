@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Button({buttonDescription}) {
+function Button({buttonDescription , clickFunction}) {
   return (
     <div>
-        <button className='mt-3 px-6 py-2 border rounded-4xl'>{buttonDescription}</button>
+        <button onClick={clickFunction} className='mt-3 px-6 py-2 border rounded-4xl'>{buttonDescription}</button>
     </div>
   )
 }
