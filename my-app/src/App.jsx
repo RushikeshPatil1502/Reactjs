@@ -7,6 +7,8 @@ import ProductList from "./Components/02-Nested-Components/ProductList"
 import Products from "./Components/03-UseState/Products"
 import ComponentUseeffect from "./Components/04-UseEffect/component-useeffect"
 import Users from "./Components/04-APICall-UseEffect/Users"
+import ContextText from "./Components/05-Context-Conecept/text"
+import ContextButton from "./Components/05-Context-Conecept/button"
 const chelseaPlayersList = ['Cole Palmer' , 'Enzo Fernandez' , 'Reece James']
 
 
@@ -24,6 +26,9 @@ const App = () => {
           <Products />
           <ComponentUseeffect />
           <Users />
+
+          <ContextText />
+          <ContextButton />
       </div>
       
   )
