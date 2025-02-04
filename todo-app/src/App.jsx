@@ -1,12 +1,16 @@
 import { useEffect } from "react"
 import { useState } from "react"
 import TodoItem from "./Components/TodoItem"
+import TodoDetails from "./Components/TodoDetails"
 
 function App() {
 
   const [todosList , setTodosList] = useState([])
   const [loadingState, setLoadingState] = useState(false)
   const [errorMsg , setErrorMsg] = useState('')
+
+  const [todoDetails , setTodoDetails] = useState(null)
+  const [openDialog , setOpenDialog] = useState(false)
 
   async function fetchAllTodosList() {
     try{
@@ -29,6 +33,23 @@ function App() {
     }
   }
 
+  async function fetchAllTodoDetails(getTodoId) {
+      try {
+        const apiResponse = await fetch(`https://dummyjson.com/todos/${getTodoId}`)
+        const details = await apiResponse.json()
+
+        if(details){
+          setTodoDetails(details)
+          setOpenDialog(true)
+        } else{
+          setTodoDetails(null)
+          setOpenDialog(false)
+        }
+      } catch (error) {
+        console.log(error);
+      }
+  }
+
   useEffect(()=>{
      fetchAllTodosList()
   },[])
@@ -41,10 +62,12 @@ function App() {
             {
               todosList && todosList.length ? 
               todosList.map(todoItem => 
-                <TodoItem key={todoItem.id} todo={todoItem.todo}/>
+                <TodoItem key={todoItem.id} todo={todoItem.todo} fetchAllTodoDetails={fetchAllTodoDetails} todoId={todoItem.id} />
               ) : null
             }
         </div>
+
+        <TodoDetails todos={todoDetails?.todo} open={openDialog} setOpenDialog={setOpenDialog}/>
     </div>
   )
 }

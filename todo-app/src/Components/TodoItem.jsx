@@ -1,8 +1,7 @@
 import { Button, Card, CardActions, CardContent, Typography } from "@mui/material";
 
 // eslint-disable-next-line react/prop-types
-function TodoItem({todo}) {
-    console.log(todo);
+function TodoItem({todo , fetchAllTodoDetails , todoId}) {
   return (
     <Card sx={{
         maxWidth: 350,
@@ -14,7 +13,7 @@ function TodoItem({todo}) {
             <Typography variant="h5" color={'text.secondary'}>{todo}</Typography>
         </CardContent>
         <CardActions>
-            <Button sx={{
+            <Button onClick={() => fetchAllTodoDetails(todoId)} sx={{
                 backgroundColor: '#000',
                 color: '#fff',
                 opacity: 0.75,
