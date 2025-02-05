@@ -2,7 +2,6 @@ import { useEffect } from "react"
 import { useState } from "react"
 import TodoItem from "./Components/TodoItem"
 import TodoDetails from "./Components/TodoDetails"
-
 function App() {
 
   const [todosList , setTodosList] = useState([])
@@ -53,6 +52,10 @@ function App() {
   useEffect(()=>{
      fetchAllTodosList()
   },[])
+
+  if(loadingState) return <div className=" flex justify-center items-center min-h-screen">
+       <div className="animate-spin border-t-8 h-32 w-32 rounded-full border-black"></div>
+    </div>
 
   return (
     <div className="p-[50px]">
