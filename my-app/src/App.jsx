@@ -10,6 +10,7 @@ import Users from "./Components/04-APICall-UseEffect/Users"
 import ContextText from "./Components/05-Context-Conecept/text"
 import ContextButton from "./Components/05-Context-Conecept/button"
 import UseReducerExample from "./Components/06-UseReducer-Hook/UseReducerExample"
+import Form from "./Components/07-Form-Handling/Form"
 const chelseaPlayersList = ['Cole Palmer' , 'Enzo Fernandez' , 'Reece James']
 
 
@@ -32,6 +33,7 @@ const App = () => {
           <ContextButton />
 
           <UseReducerExample />
+          <Form />
       </div>
       
   )
