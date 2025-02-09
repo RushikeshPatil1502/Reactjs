@@ -11,6 +11,8 @@ import ContextText from "./Components/05-Context-Conecept/text"
 import ContextButton from "./Components/05-Context-Conecept/button"
 import UseReducerExample from "./Components/06-UseReducer-Hook/UseReducerExample"
 import Form from "./Components/07-Form-Handling/Form"
+import LoginForm from "./Components/08-LoginForm/LoginForm"
+import RegisterForm from "./Components/08-Register-Form/RegisterForm"
 const chelseaPlayersList = ['Cole Palmer' , 'Enzo Fernandez' , 'Reece James']
 
 
@@ -34,6 +36,11 @@ const App = () => {
 
           <UseReducerExample />
           <Form />
+
+          <div className="flex justify-between gap-[100px] mt-10 mb-10">
+            <LoginForm />
+            <RegisterForm />
+          </div>
       </div>
       
   )
