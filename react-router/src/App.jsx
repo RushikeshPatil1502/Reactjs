@@ -13,10 +13,10 @@ function App() {
             <Route path="recipe-list" element={<RecipesList/>} />
             <Route path="comments-list" element={<CommentsList/>} />
             <Route path="recipe-list/:id" element={<RecipesDetails/>} />
-        </Route>
-        
+        </Route>        
         <Route path="*" element={<NotFound/>} />
       </Routes>
+      
     </>
 
   )
