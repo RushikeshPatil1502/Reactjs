@@ -4,6 +4,7 @@ import CommentsList from "../pages/Comments/Comments"
 import RecipesDetails from "../pages/Recipes/RecipesDetails"
 import NotFound from "../pages/Not-found/NotFound"
 import Layout from "./components/layout"
+import ReactHookForm from "./components/react-hook-form/ReactHookForm"
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
             <Route path="recipe-list" element={<RecipesList/>} />
             <Route path="comments-list" element={<CommentsList/>} />
             <Route path="recipe-list/:id" element={<RecipesDetails/>} />
+            <Route path="react-hook-form" element={<ReactHookForm/>} />
         </Route>        
         <Route path="*" element={<NotFound/>} />
       </Routes>
