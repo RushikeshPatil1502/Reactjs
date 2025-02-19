@@ -11,6 +11,7 @@ function Home() {
            <Link className="px-5 py-2 border text-black border-black rounded-lg" to={'recipe-list'}>Recipe Page</Link>
            <Link className="px-5 py-2 border text-black border-black rounded-lg" to={'comments-list'}>Comments Page</Link>
            <Link className="px-5 py-2 border text-black border-black rounded-lg" to={'react-hook-form'}>Form Page</Link>
+           <Link className="px-5 py-2 border text-black border-black rounded-lg" to={'hooks'}>Hooks Page</Link>
         </div>
 
         {/* <div className="py-16 text-4xl font-bold w-full bg-black mt-10 flex justify-center items-center">
