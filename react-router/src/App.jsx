@@ -8,6 +8,7 @@ import ReactHookForm from "./components/react-hook-form/ReactHookForm"
 import Hooks from "./components/hooks/Hooks"
 import Memo from "./components/hooks/Memo"
 import Callback from "./components/hooks/Callback"
+import ReactQuery from "./components/React-query/ReactQuery"
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="hooks" element={<Hooks/>} />
             <Route path="memo" element={<Memo/>} />
             <Route path="callback" element={<Callback/>} />
+            <Route path="react-query" element={<ReactQuery/>} />
         </Route>        
         <Route path="*" element={<NotFound/>} />
       </Routes>

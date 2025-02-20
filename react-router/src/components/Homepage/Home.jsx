@@ -14,6 +14,7 @@ function Home() {
            <Link className="px-5 py-2 border text-black border-black rounded-lg" to={'hooks'}>Hooks Page</Link>
            <Link className="px-5 py-2 border text-black border-black rounded-lg" to={'memo'}>Memo Page</Link>
            <Link className="px-5 py-2 border text-black border-black rounded-lg" to={'callback'}>Callback Page</Link>
+           <Link className="px-5 py-2 border text-black border-black rounded-lg" to={'react-query'}>React Query Page</Link>
         </div>
 
         {/* <div className="py-16 text-4xl font-bold w-full bg-black mt-10 flex justify-center items-center">
