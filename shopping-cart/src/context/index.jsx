@@ -12,14 +12,21 @@ async function fetchAllProducts() {
     return await apiResponse.json()
 }
 
+
 function ShoppingCartProvider({children}){
+    // const [productDetails , setProductDetails] = useState(null)
+
     const {data: productList , isPending} = useQuery({
         queryKey: ['products'],
         queryFn: fetchAllProducts
     })
 
+    function handleAddToCart(getProductDetails){
+        console.log(getProductDetails);
+    }
+
     return(
-        <ShoppingCartContext.Provider value={{productList,isPending}}>
+        <ShoppingCartContext.Provider value={{productList,isPending,handleAddToCart}}>
             {children}
         </ShoppingCartContext.Provider>
     )

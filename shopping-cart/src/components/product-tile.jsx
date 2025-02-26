@@ -9,6 +9,7 @@ function ProductTile({singleProductItem}) {
     function handleGoToProductDetailsPage(getProductId){
         navigate(`/product-details/${getProductId}`)
     }
+    
   return (
     <div className="p-6 shadow rounded-lg hover:shadow-lg hover:translate-x-0.5">
         <div className="overflow-hidden aspect-w-1 aspect-h-1">
