@@ -11,6 +11,7 @@ async function getSingleProduct(id) {
 
 function ProductDetailsPage() {
   const {handleAddToCart} = useContext(ShoppingCartContext)
+
   const { productId } = useParams()
   const navigate = useNavigate()
 
